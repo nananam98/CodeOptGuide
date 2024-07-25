@@ -21,9 +21,7 @@ def display_folder_contents(folder_path):
                 if st.button(f'📄 {get_display_name(item)}', key=item_path):  # Hiển thị tên thân thiện
                     st.session_state['selected_file'] = item_path
 
-def main():
-    st.title('Thư viện kiến thức lập trình')
-    
+def main():    
     if 'current_path' not in st.session_state:
         st.session_state['current_path'] = '.'
     
