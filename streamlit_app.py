@@ -12,16 +12,17 @@ def get_display_name(name):
     return display_names.get(name, name)
 
 # Hàm hiển thị nội dung thư mục
-def display_folder_contents(folder_path, search_query=""):
+def display_folder_contents(folder_path):
     items = os.listdir(folder_path)
-    for item in items:
-        if item in display_names and search_query.lower() in get_display_name(item).lower():
+    for idx, item in enumerate(items):
+        if item in display_names:  # Chỉ hiển thị các mục có trong display_names
             item_path = os.path.join(folder_path, item)
+            unique_key = f"{item_path}_{idx}"  # Tạo key duy nhất cho mỗi button
             if os.path.isdir(item_path):
-                if st.button(f'📂 {get_display_name(item)}', key=item_path):
+                if st.button(f'📂 {get_display_name(item)}', key=unique_key):
                     st.session_state['current_path'] = item_path
             elif item.endswith('.md'):
-                if st.button(f'📄 {get_display_name(item)}', key=item_path):  # Hiển thị tên thân thiện
+                if st.button(f'📄 {get_display_name(item)}', key=unique_key):  # Hiển thị tên thân thiện
                     st.session_state['selected_file'] = item_path
                     if 'viewed_files' not in st.session_state:
                         st.session_state['viewed_files'] = []
@@ -41,14 +42,12 @@ def main():
         st.markdown(content)
     else:
         st.sidebar.button('Back to Root', on_click=lambda: st.session_state.update({'current_path': '.'}))
-        
-        search_query = st.sidebar.text_input("Tìm kiếm")
-        display_folder_contents(st.session_state['current_path'], search_query)
+        display_folder_contents(st.session_state['current_path'])
 
         if 'viewed_files' in st.session_state and st.session_state['viewed_files']:
             st.sidebar.markdown("### Các file đã xem")
             for file_path in st.session_state['viewed_files']:
-                if st.sidebar.button(f"📄 {get_display_name(os.path.basename(file_path))}", key=file_path):
+                if st.sidebar.button(f"📄 {get_display_name(os.path.basename(file_path))}", key=f"viewed_{file_path}"):
                     st.session_state['selected_file'] = file_path
 
 if __name__ == '__main__':
