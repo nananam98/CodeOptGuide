@@ -29,6 +29,14 @@ def display_folder_contents(folder_path):
                     if item_path not in st.session_state['viewed_files']:
                         st.session_state['viewed_files'].append(item_path)
 
+# Hàm hiển thị các file đã xem
+def display_viewed_files():
+    if 'viewed_files' in st.session_state and st.session_state['viewed_files']:
+        st.sidebar.markdown("### Các file đã xem")
+        for file_path in st.session_state['viewed_files']:
+            if st.sidebar.button(f"📄 {get_display_name(os.path.basename(file_path))}", key=f"viewed_{file_path}"):
+                st.session_state['selected_file'] = file_path
+
 # Hàm chính
 def main():
     st.title('Thư viện kiến thức lập trình')
@@ -43,12 +51,9 @@ def main():
     else:
         st.sidebar.button('Back to Root', on_click=lambda: st.session_state.update({'current_path': '.'}))
         display_folder_contents(st.session_state['current_path'])
-
-        if 'viewed_files' in st.session_state and st.session_state['viewed_files']:
-            st.sidebar.markdown("### Các file đã xem")
-            for file_path in st.session_state['viewed_files']:
-                if st.sidebar.button(f"📄 {get_display_name(os.path.basename(file_path))}", key=f"viewed_{file_path}"):
-                    st.session_state['selected_file'] = file_path
+    
+    # Hiển thị các file đã xem
+    display_viewed_files()
 
 if __name__ == '__main__':
     main()
