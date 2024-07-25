@@ -1,20 +1,25 @@
 import streamlit as st
 import os
+from display_names import display_names  # Import từ điển tên hiển thị
 
 def read_markdown_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         return file.read()
 
+def get_display_name(name):
+    return display_names.get(name, name)
+
 def display_folder_contents(folder_path):
     items = os.listdir(folder_path)
     for item in items:
-        item_path = os.path.join(folder_path, item)
-        if os.path.isdir(item_path):
-            if st.button(f'📂 {item}', key=item_path):
-                st.session_state['current_path'] = item_path
-        elif item.endswith('.md'):
-            if st.button(f'📄 {item}', key=item_path):
-                st.session_state['selected_file'] = item_path
+        if item in display_names:  # Chỉ hiển thị các mục có trong display_names
+            item_path = os.path.join(folder_path, item)
+            if os.path.isdir(item_path):
+                if st.button(f'📂 {get_display_name(item)}', key=item_path):
+                    st.session_state['current_path'] = item_path
+            elif item.endswith('.md'):
+                if st.button(f'📄 {get_display_name(item)}', key=item_path):  # Hiển thị tên thân thiện
+                    st.session_state['selected_file'] = item_path
 
 def main():
     st.title('Thư viện kiến thức lập trình')
