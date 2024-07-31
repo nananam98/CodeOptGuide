@@ -127,7 +127,7 @@ class GetPositionListByListID(APIView):  # lay locate theo danh sach id truyen v
             return Response(str(error), 400)
 ```
 
-![Sơ đồ giải thuật](../../data/flowchart_1.jpg)
+![Sơ đồ giải thuật](https://raw.githubusercontent.com/nananam98/CodeOptGuide/main/data/flowchart_1.jpg)
 
 
 ### 3.2 Độ phức tạp của thuật toán
@@ -363,4 +363,4 @@ Tối ưu hóa lấy thông tin `profile` bằng cách lưu trữ vào từ đi�
 
 #### Độ phức tạp tổng thể của mỗi khối xử lý đã được giảm xuống từ `O(p) + O(n)` + `O(k * (p + n))` còn `O(n + m)` hoặc `O(n + m + k)`.
 
-![Biểu đồ tối ưu](../../data/chart_giai_thuat.png)
+![Biểu đồ tối ưu](https://raw.githubusercontent.com/nananam98/CodeOptGuide/main/data/chart_giai_thuat.png)
