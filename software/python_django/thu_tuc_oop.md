@@ -1,32 +1,32 @@
 
-# Lập trình thủ tục và hướng đối tượng
+## Lập trình thủ tục và hướng đối tượng
 
-## 1. Lập trình thủ tục (Procedural Programing)
-### 1.1 Định nghĩa
+### 1. Lập trình thủ tục (Procedural Programing)
+#### 1.1 Định nghĩa
 Lập trình thủ tục là một phương pháp lập trình tập trung vào các hàm hoặc thủ tục để thực hiện các nhiệm vụ cụ thể. Các hàm này được gọi trong một trình tự để hoàn thành công việc. Đây là cách lập trình rất phổ biến và dễ hiểu, đặc biệt là cho các nhiệm vụ đơn giản hoặc các chương trình nhỏ.
 
-### 1.2 Đặc điểm chính
+#### 1.2 Đặc điểm chính
 - Hàm: Các phần mã được chia thành các hàm thực hiện các tác vụ cụ thể.
 - Trình tự: Các hàm được gọi theo một trình tự cụ thể.
 - Dữ liệu toàn cục và cục bộ: Dữ liệu có thể được khai báo toàn cục (global) hoặc cục bộ (local) trong hàm.
 
-### 1.3. Quy ước đặt tên
+#### 1.3. Quy ước đặt tên
 - Biến: Sử dụng tên biến theo cú pháp snake_case. Ví dụ: `tong_so`, `danh_sach_so`.
 - Hàm: Sử dụng tên hàm theo cú pháp snake_case. Ví dụ: `tinh_tong`, `doc_file`.
 
-### 1.4. Điểm mạnh
+#### 1.4. Điểm mạnh
 - Đơn giản và Dễ Hiểu: Các chương trình được chia nhỏ thành các hàm đơn giản và dễ quản lý.
 - Hiệu Suất Cao: Ít tài nguyên hơn do không cần quản lý các đối tượng và mối quan hệ giữa chúng.
 - Phù Hợp với Nhiệm Vụ Đơn Giản: Thích hợp cho các tác vụ hoặc chương trình nhỏ, không phức tạp.
 - Trực Quan: Dễ dàng theo dõi luồng thực hiện của chương trình từ trên xuống dưới.
 
-### 1.5. Điểm yếu
+#### 1.5. Điểm yếu
 - Khó Bảo Trì: Khi chương trình trở nên lớn và phức tạp, việc bảo trì và mở rộng sẽ trở nên khó khăn.
 - Thiếu Tính Tái Sử Dụng: Các hàm thường không dễ dàng tái sử dụng do không có cấu trúc mô-đun rõ ràng.
 - Quản Lý Dữ Liệu Kém: Biến toàn cục có thể dẫn đến lỗi không mong muốn và khó theo dõi.
 - Thiếu Tính Trừu Tượng: Không có cách để mô hình hóa các khái niệm phức tạp bằng các đối tượng và mối quan hệ giữa chúng.
 
-### 1.6. Ví dụ
+#### 1.6. Ví dụ
 ```python
 # Lập trình thủ tục
 
@@ -48,35 +48,35 @@ main()
 ```
 Trong ví dụ này, `tinh_tong` là một hàm được gọi trong hàm chính `main` để tính tổng của danh sách số.
 
-## 2. Lập trình hướng đối tượng (Object Oriented Programing)
-### 2.1 Định nghĩa
+### 2. Lập trình hướng đối tượng (Object Oriented Programing)
+#### 2.1 Định nghĩa
 Lập trình hướng đối tượng là một phương pháp lập trình tập trung vào các đối tượng, là sự kết hợp của dữ liệu và các phương thức (hàm) thao tác trên dữ liệu đó. Nó rất hiệu quả cho các dự án lớn và phức tạp vì tính mô-đun và khả năng tái sử dụng cao.
 
-### 2.2 Đặc điểm chính
+#### 2.2 Đặc điểm chính
 - Đối tượng và Lớp (Object and Class): Đối tượng (Object) là thực thể, trong khi lớp (Class) là khuôn mẫu cho các đối tượng.
 - Tính kế thừa: Lớp con có thể kế thừa các thuộc tính và phương thức của lớp cha.
 - Tính đóng gói: Dữ liệu và phương thức được bao gói trong đối tượng, hạn chế truy cập trực tiếp từ bên ngoài.
 - Tính đa hình: Cùng một phương thức có thể có các hành vi khác nhau dựa trên đối tượng gọi nó.
 - Tính trừu tượng: Mô hình hoá các mối quan hệ đối tượng
 
-### 2.3 Quy ước đặt tên
+#### 2.3 Quy ước đặt tên
 - Lớp: Sử dụng tên lớp theo cú pháp PascalCase. Ví dụ: `DanhSachSo`, `XeHoi`.
 - Phương thức: Sử dụng tên phương thức theo cú pháp snake_case. Ví dụ: `tinh_tong`, `chay`.
 
-### 2.4 Điểm mạnh
+#### 2.4 Điểm mạnh
 - Tái Sử Dụng Mã Cao: Các lớp và đối tượng có thể dễ dàng tái sử dụng trong các phần khác của chương trình hoặc trong các dự án khác.
 - Bảo Trì và Mở Rộng Dễ Dàng: Chương trình được chia nhỏ thành các đối tượng có thể dễ dàng bảo trì và mở rộng.
 - Quản Lý Dữ Liệu Tốt: Tính đóng gói giúp bảo vệ và quản lý dữ liệu hiệu quả hơn.
 - Tính Trừu Tượng: Dễ dàng mô hình hóa các khái niệm phức tạp và các mối quan hệ giữa chúng.
 - Tính Đa Hình và Kế Thừa: Giúp giảm thiểu sự trùng lặp mã và tạo ra các hệ thống linh hoạt hơn.
 
-### 2.5 Điểm yếu
+#### 2.5 Điểm yếu
 - Phức Tạp Hơn: Cấu trúc chương trình phức tạp hơn và cần nhiều tài nguyên hơn để quản lý các đối tượng.
 - Hiệu Suất Thấp Hơn: Đòi hỏi nhiều tài nguyên hơn do quản lý các đối tượng và mối quan hệ giữa chúng.
 - Khó Học Hơn: Cần thời gian và nỗ lực để hiểu và áp dụng đúng các nguyên lý của lập trình hướng đối tượng.
 - Quá Tải Cho Các Nhiệm Vụ Đơn Giản: Không thích hợp cho các chương trình nhỏ hoặc đơn giản do cấu trúc phức tạp.
 
-### 2.6 Các hàm đặc biệt
+#### 2.6 Các hàm đặc biệt
 - `__init__`: Hàm khởi tạo, được gọi khi một đối tượng mới của lớp được tạo ra.
 - `__getitem__`, `__setitem__`, `__delitem__`: Các hàm cho phép truy cập, gán và xóa phần tử của đối tượng như một danh sách hoặc từ điển.
 - `__call__`: Cho phép đối tượng hoạt động như một hàm.
@@ -126,7 +126,7 @@ Lập trình hướng đối tượng là một phương pháp lập trình tậ
 | `__ceil__(self)`      | Toán tử `math.ceil()` (làm tròn lên) trên đối tượng.                            | Gây ra lỗi `TypeError`.                                             |
 | `__trunc__(self)`     | Toán tử `math.trunc()` (cắt phần thập phân) trên đối tượng.                     | Gây ra lỗi `TypeError`.                                             |
 
-### 2.7 Ví dụ
+#### 2.7 Ví dụ
 ```python
 # Lập trình hướng đối tượng
 

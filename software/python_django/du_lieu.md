@@ -1,153 +1,153 @@
 
-# Các Kiểu Dữ Liệu Trong Python
+## Các Kiểu Dữ Liệu Trong Python
 
-## 1. List
+### 1. List
 
-### 1.1 Định Nghĩa
+#### 1.1 Định Nghĩa
 - **List** là một cấu trúc dữ liệu có thứ tự trong Python, cho phép lưu trữ nhiều giá trị khác nhau, bao gồm cả số nguyên, chuỗi, và các đối tượng khác. List có thể thay đổi được (mutable), nghĩa là các phần tử trong list có thể được thay đổi sau khi list được khởi tạo.
 
-### 1.2 Cú Pháp
+#### 1.2 Cú Pháp
 ```python
 list_name = [item1, item2, item3]
 ```
 
-### 1.3 Ví Dụ
+#### 1.3 Ví Dụ
 ```python
 numbers = [1, 2, 3, 4, 5]
 fruits = ["apple", "banana", "cherry"]
 mixed = [1, "hello", 3.14, True]
 ```
 
-### 1.4 Điểm Mạnh
+#### 1.4 Điểm Mạnh
 - Linh hoạt, có thể chứa nhiều loại dữ liệu khác nhau.
 - Có thể thay đổi, thêm, xóa các phần tử dễ dàng.
 - Hỗ trợ nhiều phương thức xử lý danh sách như `append()`, `remove()`, `pop()`, `sort()`, `reverse()`.
 
-### 1.5 Điểm Yếu
+#### 1.5 Điểm Yếu
 - Hiệu suất không cao khi thêm hoặc xóa nhiều phần tử liên tục, đặc biệt là với list lớn.
 - Tốn nhiều bộ nhớ hơn so với các cấu trúc dữ liệu khác như array trong numpy.
 
-### 1.6 Khi Nào Sử Dụng
+#### 1.6 Khi Nào Sử Dụng
 - Khi cần một danh sách các giá trị có thể thay đổi, chứa nhiều loại dữ liệu khác nhau.
 - Khi cần thao tác linh hoạt với các phần tử, như thêm, xóa, sắp xếp.
 
-## 2. Set
+### 2. Set
 
-### 2.1 Định Nghĩa
+#### 2.1 Định Nghĩa
 - **Set** là một cấu trúc dữ liệu không có thứ tự trong Python, lưu trữ các giá trị duy nhất. Không có phần tử nào trong set có thể xuất hiện hai lần.
 
-### 2.2 Cú Pháp
+#### 2.2 Cú Pháp
 ```python
 set_name = {item1, item2, item3}
 ```
 
-### 2.3 Ví Dụ
+#### 2.3 Ví Dụ
 ```python
 unique_numbers = {1, 2, 3, 4, 5}
 letters = {"a", "b", "c", "d"}
 ```
 
-### 2.4 Điểm Mạnh
+#### 2.4 Điểm Mạnh
 - Lưu trữ các giá trị duy nhất, không có phần tử trùng lặp.
 - Hiệu suất cao khi kiểm tra sự tồn tại của phần tử trong set.
 - Hỗ trợ các phép toán tập hợp như hợp (`union`), giao (`intersection`), hiệu (`difference`).
 
-### 2.5 Điểm Yếu
+#### 2.5 Điểm Yếu
 - Không duy trì thứ tự các phần tử.
 - Không thể chứa các kiểu dữ liệu không thể băm (hashable), như list, dict.
 
-### 2.6 Khi Nào Sử Dụng
+#### 2.6 Khi Nào Sử Dụng
 - Khi cần lưu trữ các giá trị duy nhất và thực hiện các phép toán tập hợp.
 - Khi cần kiểm tra nhanh sự tồn tại của một phần tử trong tập hợp.
 
-## 3. Tuple
+### 3. Tuple
 
-### 3.1 Định Nghĩa
+#### 3.1 Định Nghĩa
 - **Tuple** là một cấu trúc dữ liệu có thứ tự trong Python, giống như list nhưng không thể thay đổi (immutable). Một khi tuple được tạo, các giá trị bên trong nó không thể thay đổi.
 
-### 3.2 Cú Pháp
+#### 3.2 Cú Pháp
 ```python
 tuple_name = (item1, item2, item3)
 ```
 
-### 3.3 Ví Dụ
+#### 3.3 Ví Dụ
 ```python
 coordinates = (10.0, 20.0)
 person = ("John", 25, "Engineer")
 ```
 
-### 3.4 Điểm Mạnh
+#### 3.4 Điểm Mạnh
 - Hiệu suất cao hơn list do tuple bất biến.
 - An toàn cho dữ liệu không cần thay đổi, giúp tránh các lỗi không mong muốn do thay đổi dữ liệu.
 
-### 3.5 Điểm Yếu
+#### 3.5 Điểm Yếu
 - Không thể thay đổi giá trị sau khi khởi tạo.
 - Ít phương thức hỗ trợ hơn list.
 
-### 3.6 Khi Nào Sử Dụng
+#### 3.6 Khi Nào Sử Dụng
 - Khi cần lưu trữ một bộ giá trị cố định, không thay đổi.
 - Khi cần bảo vệ dữ liệu khỏi sự thay đổi không mong muốn.
 
-## 4. Dictionary (Dict)
+### 4. Dictionary (Dict)
 
-### 4.1 Định Nghĩa
+#### 4.1 Định Nghĩa
 - **Dictionary** là một cấu trúc dữ liệu lưu trữ các cặp khóa-giá trị (key-value pairs), nơi mỗi khóa là duy nhất. Dữ liệu trong dict được truy xuất bằng khóa.
 
-### 4.2 Cú Pháp
+#### 4.2 Cú Pháp
 ```python
 dict_name = {key1: value1, key2: value2}
 ```
 
-### 4.3 Ví Dụ
+#### 4.3 Ví Dụ
 ```python
 student = {"name": "John", "age": 21, "major": "CS"}
 product = {"id": 101, "name": "Laptop", "price": 1500}
 ```
 
-### 4.4 Điểm Mạnh
+#### 4.4 Điểm Mạnh
 - Truy xuất giá trị nhanh chóng bằng khóa.
 - Rất linh hoạt, có thể chứa nhiều loại dữ liệu khác nhau.
 
-### 4.5 Điểm Yếu
+#### 4.5 Điểm Yếu
 - Tốn nhiều bộ nhớ.
 - Không duy trì thứ tự trong các phiên bản Python cũ (trước 3.7).
 
-### 4.6 Khi Nào Sử Dụng
+#### 4.6 Khi Nào Sử Dụng
 - Khi cần lưu trữ dữ liệu theo cặp khóa-giá trị và truy xuất giá trị bằng khóa.
 - Khi cần lưu trữ các thông tin có cấu trúc phức tạp và không đồng nhất.
 
-## 5. Array (Numpy)
+### 5. Array (Numpy)
 
-### 5.1 Định Nghĩa
+#### 5.1 Định Nghĩa
 - **Array** trong thư viện numpy là một cấu trúc dữ liệu lưu trữ các giá trị cùng kiểu dữ liệu, hỗ trợ các phép toán số học hiệu quả. Array trong numpy tối ưu hơn list cho các phép tính toán khoa học và kỹ thuật.
 
-### 5.2 Cú Pháp
+#### 5.2 Cú Pháp
 ```python
 import numpy as np
 array_name = np.array([item1, item2, item3])
 ```
 
-### 5.3 Ví Dụ
+#### 5.3 Ví Dụ
 ```python
 numbers = np.array([1, 2, 3, 4, 5])
 matrix = np.array([[1, 2, 3], [4, 5, 6]])
 ```
 
-### 5.4 Điểm Mạnh
+#### 5.4 Điểm Mạnh
 - Hiệu suất cao cho các phép toán số học.
 - Sử dụng ít bộ nhớ hơn list cho các dữ liệu cùng kiểu.
 
-### 5.5 Điểm Yếu
+#### 5.5 Điểm Yếu
 - Cần cài đặt thư viện numpy.
 - Ít linh hoạt hơn list cho các loại dữ liệu khác nhau.
 
-### 5.6 Khi Nào Sử Dụng
+#### 5.6 Khi Nào Sử Dụng
 - Khi cần thực hiện các phép toán số học hiệu quả trên các giá trị cùng kiểu.
 - Khi làm việc với dữ liệu lớn trong các ứng dụng khoa học và kỹ thuật.
 
-## 6. Ví Dụ Sử Dụng Các Kiểu Dữ Liệu Trong Django
+### 6. Ví Dụ Sử Dụng Các Kiểu Dữ Liệu Trong Django
 
-### 6.1 Sử Dụng List Trong Django
+#### 6.1 Sử Dụng List Trong Django
 - **Ví dụ:** Lưu trữ danh sách các sản phẩm trong một đơn hàng tạm thời trước khi lưu vào cơ sở dữ liệu.
 ```python
 # models.py
@@ -170,7 +170,7 @@ def create_order(request):
 - **Tận dụng điểm mạnh:** List cho phép lưu trữ và xử lý danh sách các sản phẩm linh hoạt trước khi lưu vào cơ sở dữ liệu.
 - **Hạn chế điểm yếu:** Chuyển đổi list sang JSON để lưu trữ trong TextField nhằm tránh tốn nhiều bộ nhớ.
 
-### 6.2 Sử Dụng Set Trong Django
+#### 6.2 Sử Dụng Set Trong Django
 - **Ví dụ:** Kiểm tra các quyền hạn duy nhất của người dùng trong hệ thống.
 ```python
 # models.py
@@ -188,7 +188,7 @@ def check_permissions(user, required_permissions):
 - **Tận dụng điểm mạnh:** Set giúp kiểm tra nhanh chóng sự tồn tại của các quyền hạn trong tập hợp.
 - **Hạn chế điểm yếu:** Chuyển đổi set sang JSON để lưu trữ trong TextField.
 
-### 6.3 Sử Dụng Tuple Trong Django
+#### 6.3 Sử Dụng Tuple Trong Django
 - **Ví dụ:** Định nghĩa các lựa chọn cố định cho trạng thái đơn hàng.
 ```python
 # models.py
@@ -203,7 +203,7 @@ class Order(models.Model):
 - **Tận dụng điểm mạnh:** Tuple cung cấp bộ giá trị cố định, không thay đổi, đảm bảo tính toàn vẹn dữ liệu.
 - **Hạn chế điểm yếu:** Chỉ dùng cho các giá trị cố định, không thay đổi.
 
-### 6.4 Sử Dụng Dictionary Trong Django
+#### 6.4 Sử Dụng Dictionary Trong Django
 - **Ví dụ:** Lưu trữ cấu hình chi tiết cho từng sản phẩm.
 ```python
 # models.py
@@ -219,7 +219,7 @@ def get_product_configuration(product_id):
 - **Tận dụng điểm mạnh:** Dictionary giúp lưu trữ và truy xuất các cặp khóa-giá trị nhanh chóng.
 - **Hạn chế điểm yếu:** Sử dụng JSONField để tận dụng khả năng lưu trữ linh hoạt của dict mà không tốn nhiều bộ nhớ.
 
-### 6.5 Sử Dụng Array (Numpy) Trong Django
+#### 6.5 Sử Dụng Array (Numpy) Trong Django
 - **Ví dụ:** Tính toán và phân tích số liệu bán hàng.
 ```python
 # views.py
@@ -244,7 +244,7 @@ def analyze_sales(sales_data):
 | **Array (Numpy)** | Cấu trúc dữ liệu lưu trữ các giá trị cùng kiểu | `np.array([1, 2, 3, 4, 5])` | Hiệu suất cao, tốn ít bộ nhớ | Cần cài đặt numpy, ít linh hoạt | Khi cần thực hiện các phép toán số học |
 
 
-## 7. Giải Thích Về Chuyển Đổi Dữ Liệu và Tiết Kiệm Bộ Nhớ
+### 7. Giải Thích Về Chuyển Đổi Dữ Liệu và Tiết Kiệm Bộ Nhớ
 
 #### Sử Dụng JSON, TextField, và JSONField
 
@@ -332,12 +332,12 @@ plt.show()
 memory_usage
 ```
 
-## 8. Lưu ý quan trọng khi sử dụng JSON trong TextField và JSONField trên góc nhìn thiết kế cơ sở dữ liệu
+### 8. Lưu ý quan trọng khi sử dụng JSON trong TextField và JSONField trên góc nhìn thiết kế cơ sở dữ liệu
 
-### 8.1 Chuẩn BCNF (Boyce-Codd Normal Form)
+#### 8.1 Chuẩn BCNF (Boyce-Codd Normal Form)
 - **Định nghĩa:** BCNF là một dạng chuẩn hóa cơ sở dữ liệu giúp loại bỏ các dạng dư thừa dữ liệu. Một bảng được gọi là BCNF nếu nó thỏa mãn điều kiện chuẩn hóa 3NF và mọi phụ thuộc hàm (functional dependency) X → Y thì X phải là siêu khóa (super key).
 
-### 8.2 Đánh Giá Các Phương Pháp Lưu Trữ
+#### 8.2 Đánh Giá Các Phương Pháp Lưu Trữ
 
 #### 8.2.1 Sử Dụng JSON Trong TextField và JSONField
 

@@ -1,11 +1,11 @@
 
-# Cấu Trúc Dữ Liệu và Giải Thuật
+## Cấu Trúc Dữ Liệu và Giải Thuật
 
-## 1. Giải Thuật
-### 1.1 Định nghĩa
+### 1. Giải Thuật
+#### 1.1 Định nghĩa
 Giải thuật (algorithm) là một tập hợp hữu hạn các chỉ thị được xác định rõ ràng để giải quyết một vấn đề hoặc thực hiện một tác vụ cụ thể. Giải thuật thường được mô tả bằng ngôn ngữ tự nhiên, ngôn ngữ lập trình, hoặc dưới dạng sơ đồ hình học (flowchart).
 
-### 1.2 Đọc giải thuật theo chuẩn hình học (diagram)
+#### 1.2 Đọc giải thuật theo chuẩn hình học (diagram)
 Một sơ đồ giải thuật (flowchart) là một biểu đồ thể hiện các bước thực hiện của giải thuật bằng các hình khối và mũi tên. Các hình khối thường gặp bao gồm:
 - Hình chữ nhật: Thể hiện một bước xử lý hoặc hành động.
 - Hình thoi: Thể hiện một bước kiểm tra điều kiện.
@@ -13,22 +13,22 @@ Một sơ đồ giải thuật (flowchart) là một biểu đồ thể hiện c
 - Mũi tên: Thể hiện luồng thực hiện của giải thuật.
 - Hình bình hành: Thể hiện nhập hoặc xuất dữ liệu
 
-## 2. Độ phức tạp của giải thuật
-### 2.1 Định nghĩa
+### 2. Độ phức tạp của giải thuật
+#### 2.1 Định nghĩa
 Độ phức tạp của giải thuật là một thước đo để đánh giá lượng tài nguyên (thời gian và không gian) cần thiết để thực hiện giải thuật.
 
-### 2.2 Cách tính độ phức tạp của giải thuật
+#### 2.2 Cách tính độ phức tạp của giải thuật
 Độ phức tạp thời gian (time complexity) và độ phức tạp không gian (space complexity) thường được biểu diễn bằng ký hiệu Big-O, chẳng hạn O(1), O(n), O(log n), O(n^2).
 
-### 2.3 Cách tối ưu giải thuật
+#### 2.3 Cách tối ưu giải thuật
 Để tối ưu giải thuật, ta có thể:
 - Giảm số lần lặp lại các bước.
 - Sử dụng cấu trúc dữ liệu phù hợp.
 - Tránh các thao tác không cần thiết.
 
-## 3. Ví dụ cụ thể
+### 3. Ví dụ cụ thể
 
-### 3.1 Code dự án
+#### 3.1 Code dự án
 ```python
 class GetPositionListByListID(APIView):  # lay locate theo danh sach id truyen vao
 
@@ -130,7 +130,7 @@ class GetPositionListByListID(APIView):  # lay locate theo danh sach id truyen v
 ![Sơ đồ giải thuật](https://raw.githubusercontent.com/nananam98/CodeOptGuide/main/data/flowchart_1.jpg)
 
 
-### 3.2 Độ phức tạp của thuật toán
+#### 3.2 Độ phức tạp của thuật toán
 ```python
 if request.data['locate_type'] == 2:
     list_zone = []
@@ -228,7 +228,7 @@ Vòng lặp `for id in list_id` có độ phức tạp `O(k)` với k là số l
 Các vòng lặp bên trong có độ phức tạp tương ứng `O(p)` và `O(n)`.  
 #### Tổng độ phức tạp cho khối này là `O(p) + O(n)` + `O(k * (p + n))`.
 
-## 4. Giải pháp cải thiện
+### 4. Giải pháp cải thiện
 #### 4.1. Phương thức `post`.
 ```python
 def post(self, request):
