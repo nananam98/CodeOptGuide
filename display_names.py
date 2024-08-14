@@ -10,6 +10,7 @@ display_names = {
     'giai_thuat.md': 'Giải thuật và độ phức tạp của giải thuật',
     'thu_tuc_oop.md': 'Lập trình thủ tục và hướng đối tượng',
     'thread.md': 'Single threaded, Multi threaded, Multi porocessing, Aysincio trong python',
+    'big_o.md': 'Độ phức tạp của thuật toán (chi tiết)',
 
     # 1.2. Thư mục software
     'database': 'Database',
