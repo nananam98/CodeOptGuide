@@ -66,9 +66,9 @@ def generate_variations_loop():
                         variations.append(variation)
     return variations
 ```
-Phương pháp này có độ phức tạp là O(n), vì số lượng vòng lặp tỷ lệ thuận với số lượng các biến thể được tạo ra (trong ví dụ trên sẽ tạo ra 9000 biến thể khác nhau)
+Phương pháp này có độ phức tạp là O(n * m * x * ...) với mỗi số lượng phần tử trong các vòng lặp. Thuật toán sẽ đạt O(n) trong trường hợp lỹ tưởng nhất với mỗi vòng for chỉ có 1 phần tử.
 
-Tới đây, tạm thời chúng ta có thể chấp nhận vì độ phức tạp dừng ở mức tuyến tính O(n). Tuy nhiên sẽ gặp khó khăn nếu số lượng thuộc tính không cố định (yêu cầu bài toán), và để sử lý vấn đề này có thể sẽ khiến thuật toán phức tạp hơn nữa. Vì vậy hoàn toàn có thể biến đổi và tối ưu tiếp để giảm thời gian và không gian cần sử dụng, đáp ứng được tiêu chí số lượng thuộc tính không có định mà không làm thay đổi độ phức tạp của thuật toán.
+Tới đây, chúng ta sẽ gặp khó khăn nếu số lượng thuộc tính không cố định (yêu cầu bài toán), và để xử lý vấn đề này có thể sẽ khiến thuật toán phức tạp hơn nữa. Vì vậy hoàn toàn có thể biến đổi và tối ưu tiếp để giảm thời gian và không gian cần sử dụng, đáp ứng được tiêu chí số lượng thuộc tính không có định mà không làm thay đổi độ phức tạp của thuật toán.
 
 Ý tưởng ở đây là sẽ tận dụng kiểu dữ liệu `tuple`, có không gian cần sử dụng ít hơn `list`. Sau đó sẽ zip các phần tử theo từng cặp, lưu trữ chúng tạm thời trong cache.
 ```python
