@@ -11,6 +11,7 @@ display_names = {
     'thu_tuc_oop.md': 'Lập trình thủ tục và hướng đối tượng',
     'thread.md': 'Single threaded, Multi threaded, Multi porocessing, Aysincio trong python',
     'big_o.md': 'Độ phức tạp của thuật toán (chi tiết)',
+    'dong_goi.md': 'Tính đóng gói trong OOP',
 
     # 1.2. Thư mục software
     'database': 'Database',
