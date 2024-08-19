@@ -12,6 +12,8 @@ display_names = {
     'thread.md': 'Single threaded, Multi threaded, Multi porocessing, Aysincio trong python',
     'big_o.md': 'Độ phức tạp của thuật toán (chi tiết)',
     'dong_goi.md': 'Tính đóng gói trong OOP',
+    'ke_thua.md': 'Tính kế thừa trong OOP',
+
 
     # 1.2. Thư mục software
     'database': 'Database',
