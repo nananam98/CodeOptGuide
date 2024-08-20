@@ -13,7 +13,8 @@ display_names = {
     'big_o.md': 'Độ phức tạp của thuật toán (chi tiết)',
     'dong_goi.md': 'Tính đóng gói trong OOP',
     'ke_thua.md': 'Tính kế thừa trong OOP',
-
+    'da_hinh.md': 'Tính đa hình trong OOP',
+    'truu_tuong.md': 'Tính trừu tượng trong OOP',
 
     # 1.2. Thư mục software
     'database': 'Database',
