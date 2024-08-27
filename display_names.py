@@ -15,6 +15,7 @@ display_names = {
     'ke_thua.md': 'Tính kế thừa trong OOP',
     'da_hinh.md': 'Tính đa hình trong OOP',
     'truu_tuong.md': 'Tính trừu tượng trong OOP',
+    'map_reduce.md': 'Map - Reduce',
 
     # 1.2. Thư mục software
     'database': 'Database',
