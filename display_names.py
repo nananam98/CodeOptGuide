@@ -17,6 +17,7 @@ display_names = {
     'truu_tuong.md': 'Tính trừu tượng trong OOP',
     'map_reduce.md': 'Map - Reduce',
     'design_pattern.md': 'Design Pattern',
+    'creational_pattern.md': 'Creational Pattern',
 
     # 1.2. Thư mục software
     'database': 'Database',
